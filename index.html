@@ -6,5 +6,21 @@
 <body>
 <h1>NowPayments Test Page</h1>
 <p>This page is for testing crypto payments.</p>
+<!-- NowPayments 支付按钮 -->
+<div id="nowpayments-button"></div>
+
+<script src="https://www.nowpayments.io/widget/nowpayments.js"></script>
+<script>
+  // 初始化按钮
+  NowPaymentsWidget.init({
+    publicKey: "313a...c8b8", // 替换为你的 Public Key
+    widget: {
+      selector: "#nowpayments-button", // 按钮显示的位置
+      amount: 1, // 默认支付金额，单位 USD
+      currency: "USD", // 支付币种，可改成 BTC/ETH 等
+      description: "Payment for Code Reactor Test Page" // 支付说明
+    }
+  });
+</script>
 </body>
 </html>
